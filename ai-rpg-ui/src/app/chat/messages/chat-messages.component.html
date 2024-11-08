@@ -1,0 +1,8 @@
+<div class="chat-messages-container" #chatMessagesContainer>
+  @for (message of messages(); track message) {
+    <div class="chat-bubble" [ngStyle]="{'background-color': getColorsForName(message.characterName).background}">
+      <strong [ngStyle]="{'color': getColorsForName(message.characterName).name}">{{ message.characterName }}</strong>
+      <p>{{ message.content }}</p>
+    </div>
+  }
+</div>
